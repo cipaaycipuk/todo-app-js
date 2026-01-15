@@ -47,9 +47,11 @@ function renderTodos() {
         //UPDATE BARU #2
         const title = document.createElement('strong')
         title.textContent = t.value
+        title.classList.add('todo-title')
 
         const descP = document.createElement('p')
         descP.textContent = t.vDesc
+        descP.classList.add('todo-desc')
 
         const actionWrap = document.createElement('div')
         actionWrap.classList.add('action')
@@ -66,10 +68,12 @@ function renderTodos() {
             const input = document.createElement('input')
             input.type = 'text'
             input.value = t.value
+            input.classList.add('editInput')
 
             const descInput = document.createElement('textarea')
             descInput.type = 'text'
             descInput.value = t.vDesc
+            descInput.classList.add('inputDesc')
 
             const actionEdit = document.createElement('div')
             actionEdit.classList.add('actionEdit')
